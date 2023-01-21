@@ -1,9 +1,9 @@
 import React from "react";
-
-import Users from "./components/users";
+import { Route } from "react-router-dom";
+import Users from "./pages/users";
 
 const App = () => {
-  return <Users />;
+  return <></>;
 };
 
 export default App;

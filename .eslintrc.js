@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    "react/react-in-jsx-scope": "off",
     indent: "off",
     semi: [2, "always"],
     quotes: ["error", "double", { allowTemplateLiterals: true }],

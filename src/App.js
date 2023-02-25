@@ -3,7 +3,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Users from "./pages/users";
 import Login from "./pages/login";
 import Main from "./pages/main";
-import NavBar from "./components/navBar";
+import NavBar from "./components/ui/navBar";
 
 const App = () => {
   return (

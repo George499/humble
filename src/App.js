@@ -11,7 +11,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/users/:userId?" element={<Users />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login/:type?" element={<Login />} />
         <Route path="/" exact element={<Main />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

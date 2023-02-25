@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import GroupList from "../../common/groupList";
 import API from "../../../api";
 import SearchStatus from "../../ui/searchStatus";
-import UserTable from "../../ui/usersTable";
+import UserTable from "../../ui/qualities/usersTable";
 import _ from "lodash";
 
 const UsersListPage = () => {

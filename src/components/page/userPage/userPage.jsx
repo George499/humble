@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import api from "../../../api";
 import QualitiesList from "../../ui/qualities/qualitiesList";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const UserPage = ({ userId }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [user, setUser] = useState();
-
   useEffect(() => {
     api.users.getById(userId).then((data) => setUser(data));
-  });
+  }, []);
   const handleClick = () => {
-    navigate("/users");
+    navigate(location.pathname + "/edit");
   };
   if (user) {
     return (
@@ -22,7 +22,7 @@ const UserPage = ({ userId }) => {
         <QualitiesList qualities={user.qualities} />
         <p>completed meetings: {user.completedMeetings}</p>
         <h2>Rate: {user.rate}</h2>
-        <button onClick={handleClick}>Все пользователи</button>
+        <button onClick={handleClick}>Изменить</button>
       </div>
     );
   } else {

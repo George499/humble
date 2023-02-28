@@ -10,7 +10,7 @@ const App = () => {
     <>
       <NavBar />
       <Routes>
-        <Route path="/users/:userId?" element={<Users />} />
+        <Route path="/users/:userId?/:edit?" element={<Users />} />
         <Route path="/login/:type?" element={<Login />} />
         <Route path="/" exact element={<Main />} />
         <Route path="*" element={<Navigate to="/" replace />} />
